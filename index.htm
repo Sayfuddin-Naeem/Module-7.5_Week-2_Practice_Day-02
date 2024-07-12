@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="bootstrap-5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="fontawesome-6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-first">
+
+  <!-- After Click Card View Section -->
+  <div id="cardAfterClick" class="container d-none my-5 d-flex justify-content-center align-items-center mx-auto">
+    
+  </div>
+
+  <div id="errorShow" class="container w-25 rounded p-3 text-danger d-flex justify-content-center align-items-center mx-auto my-3">
+  </div>
+  <!-- Search Bar Section -->
+  <div class="container my-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form class="d-flex">
+                <input id="searchInput" class="form-control me-2" type="search" placeholder="Find your favourite food" aria-label="Search">
+                <button id="searchBtn" class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Card Container Section -->
+<div id="card-container" class="container d-none d-flex justify-content-center align-items-center card-container border border-2 brd-color-grey rounded p-3">
+
+</div>
+
+
+
+  <script src="bootstrap-5/js/bootstrap.min.js"></script>
+  <script src="fontawesome-6.5.2/js/all.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
