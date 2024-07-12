@@ -115,18 +115,24 @@ document.addEventListener("DOMContentLoaded", () => {
         const searchInput = document.getElementById("searchInput");
         const searchVal = searchInput.value.trim();
 
-        const errorShow = document.getElementById("errorShow");
+        const cardAfterClick = document.getElementById("cardAfterClick");
+        cardAfterClick.classList.add("d-none");
 
+        const errorShow = document.getElementById("errorShow");
         errorShow.innerHTML = '';
-        errorShow.style.display = 'block';
+        
 
         if (!searchVal) {
+            errorShow.classList.remove("d-none");
             errorShow.classList.add("bg-second");
             errorShow.innerHTML = 'Please enter a search term';
             setTimeout(() => {
                 errorShow.style.display = 'none';
-            }, 3000);
+            }, 2000);
             return;
+        }
+        else{
+            errorShow.classList.add("d-none");
         }
 
         const apiUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchVal}`;
@@ -145,11 +151,12 @@ document.addEventListener("DOMContentLoaded", () => {
             })
             .catch(error => {
                 console.error('There was a problem with the fetch operation:', error);
+                errorShow.classList.remove("d-none");
                 errorShow.classList.add("bg-second");
                 errorShow.innerHTML = 'Error fetching data';
                 setTimeout(() => {
                     errorShow.style.display = 'none';
-                }, 3000);
+                }, 2000);
             });
     });
     // Search button onClick listner end
